@@ -1,0 +1,346 @@
+@font-face {
+  font-family: Rubik-Regular;
+  src: url(/fontes/Rubik/static/Rubik-Regular.ttf) format(truetype);
+}
+@font-face {
+  font-family: Rubik-Medium;
+  src: url(/fontes/Rubik/static/Rubik-Medium.ttf) format(truetype);
+}
+@font-face {
+  font-family: Rubik-Regular;
+  src: url(/fontes/Rubik/static/Rubik-Regular.ttf) format(truetype);
+}
+@font-face {
+  font-family: Rubik-Medium;
+  src: url(fontes/Rubik/static/Rubik-Medium.ttf) format(truetype);
+}
+@font-face {
+  font-family: Rubik-Bold;
+  src: url(fontes/Rubik/static/Rubik-Bold.ttf) format(truetype);
+}
+@font-face {
+  font-family: Rambla-Regular;
+  src: url(fontes/Rambla/Rambla-Regular.ttf) format(truetype);
+}
+@font-face {
+  font-family: Karla-Regular;
+  src: url(fontes/Karla/static/Karla-Regular.ttf) format(truetype);
+}
+body * {
+  box-sizing: border-box;
+}
+body {
+  width: 1440px;
+  height: 692px;
+}
+header {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  width: 1440px;
+  height: 613px;
+}
+.conteudoheader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: Hug (1311px);
+  height: Hug (613px);
+  left: 129px;
+}
+.conteudoheader2 {
+  width: 1311px;
+  height: 613px;
+}
+.textosheader {
+  width: 633px;
+  height: 292px;
+  flex-shrink: 0;
+  position: relative;
+  top: 169px;
+}
+.titulo {
+  color: #000;
+  font-family: Rubik-Bold;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  width: 633px;
+  height: 190px;
+  text-transform: uppercase;
+}
+.subtexto {
+  color: #000;
+  font-family: Rambla-Regular;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 528px;
+  height: 31px;
+  flex-shrink: 0;
+}
+.imagensheader {
+  width: 673px;
+  height: 613px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 774px;
+  top: 8px;
+}
+.conteudocadastro {
+  width: 640px;
+  height: 613px;
+  flex-shrink: 0;
+  position: relative;
+  left: 677.7px;
+  bottom: 343px;
+}
+.estilotextologin {
+  width: 234px;
+  height: 613px;
+  flex-shrink: 0;
+}
+.Recomendalogin {
+  width: 36px;
+  height: 434px;
+  color: #FFF;
+  font-family: Rubik-Medium;
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 700;
+  left: 50px;
+  top: 50px;
+  position: relative;
+  flex-shrink: 0;
+}
+.Bookslogin {
+  width: 30px;
+  height: 230px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 270px;
+  left: 160px;
+  color: #FFF;
+  font-family: Rubik-Medium;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.textocadastro{
+  width: 406px;
+  height: 613px;
+  background: #fff;
+  left: 227px;
+  bottom: 40px;
+  position: absolute;
+}
+.login {
+  width: 174px;
+  height: 36px;
+  color: rgba(0, 0, 0, 0.80);
+  text-align: center;
+  font-family: Rubik-Bold;
+  font-size: 29px;
+  position: relative;
+  left: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.caixa {
+  width: 279px;
+  height: 39px;
+  background: #F5F6F8;
+  position: relative;
+  left: 75px;
+  top: 50px;
+}
+.caixa2 {
+  width: 279px;
+  height: 39px;
+  background: #F5F6F8;
+  position: relative;
+  left: 75px;
+  top: 130px;
+}
+.Usuario {
+  display: flex;
+  width: 279px;
+  height: 39px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ACACAE;
+  text-align: center;
+  font-family: Rambla-Regular;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Senha {
+  display: flex;
+  width: 279px;
+  height: 39px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ACACAE;
+  text-align: center;
+  font-family: Rambla-Regular;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Cadastro {
+  display: flex;
+  width: 300px;
+  height: 23px;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  position: relative;
+  left: 40px;
+  top: 130px;
+  font-family: Rambla-Regular;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.CrieUma {
+  color: #0067B8;
+  text-decoration: none;
+  font-family: Rambla-Regular;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.botaologin {
+  width: 119px;
+  height: 53px;
+  flex-shrink: 0;
+}
+.botao{
+  width: 119px;
+  height: 52.889px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 146px;
+  top: 464px;
+}
+.txtbotaologin {
+  display: flex;
+  width: 119px;
+  height: 53px;
+  position: relative;
+  border-radius: 25.5px;
+  align-items: center;
+  background: #FF971D;
+  justify-content: center;
+  color: #FFF;
+  text-align: center;
+  font-family: Rubik-Bold;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+}
+button:hover {
+  opacity: 0.85;
+}
+footer {
+  display: inline-flex;
+  height: 80px;
+  padding: 31px 181px 25px 183px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 1440px;
+  background: #FF971D;
+}
+.conteudofooter{
+  width: 1076px;
+  height: 24px;
+  top: 31px;
+  left: 183px;
+}
+.preptitulo {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 329px;
+  width: Hug (1076px);
+  height: Hug (24px);
+  top: 31px;
+  left: 663px;
+}
+.quadrofooter {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: Hug (1076px);
+  height: Hug (24px);
+}
+.grupotextofooter {
+  width: 1076px;
+  height: 24px;
+}
+.navegacaofooter {
+  width: 1076px;
+  height: 24px;
+  gap: 60px;
+  position: absolute;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #fff;
+  font-family: Rubik-Medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.titulofooter{
+  color: #FFF;
+  font-family: Rubik-Medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  position: relative;
+  left: 345px;
+  line-height: normal;
+}
+.Recomenda {
+  color: #FFF;
+  font-family: Rubik-Regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.PaginaInicial {
+  text-decoration: none;
+  color: #fff;
+  font-family: Rubik-Medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Sobre {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  right: 100px;
+  color: #FFF;
+  font-family: Rubik-Medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
