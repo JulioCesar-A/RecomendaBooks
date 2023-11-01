@@ -30,33 +30,34 @@ body * {
   box-sizing: border-box;
 }
 body {
-  width: 1440px;
-  height: 692px;
+  width: 100vw;
+  height: 100vh;
 }
 header {
   display: inline-flex;
   justify-content: flex-end;
   align-items: center;
-  background: #fff;
-  width: 1440px;
-  height: 613px;
+  background: #999;
+  width: 100%;
+  height: 91%;
 }
 .conteudoheader {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-  width: Hug (1311px);
-  height: Hug (613px);
-  left: 129px;
+  gap: 10vh;
+  width: 95vw;
+  background-color: blue;
+  height: 100%;
 }
 .conteudoheader2 {
-  width: 1311px;
-  height: 613px;
+  width: 95vw;
+  height: 100%;
 }
 .textosheader {
-  width: 633px;
-  height: 292px;
+  width: 35%;
+  background-color: white;
+  height: 31.5%;
   flex-shrink: 0;
   position: relative;
   top: 169px;
@@ -64,80 +65,86 @@ header {
 .titulo {
   color: #000;
   font-family: Rubik-Bold;
-  font-size: 75px;
+  font-size: 7.923vh;
   font-style: normal;
   font-weight: 700;
-  line-height: 95px;
-  width: 633px;
-  height: 190px;
+  line-height: 9.923vh;
+  width: 100%;
+  background-color: blueviolet;
+  height: 70%;
   text-transform: uppercase;
 }
 .subtexto {
   color: #000;
   font-family: Rambla-Regular;
-  font-size: 25px;
+  font-size: 2.9vh;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 528px;
-  height: 31px;
+  background-color: crimson;
+  width: 90%;
+  height: 11.505%;
   flex-shrink: 0;
 }
 .imagensheader {
-  width: 673px;
-  height: 613px;
+  width: 35.05vw;
+  height: 65.52%;
+  background-color: greenyellow;
   flex-shrink: 0;
+  left: 64.037vw;
+  top: 15vh;
   position: absolute;
-  left: 774px;
-  top: 8px;
+}
+.estilograficologin {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .conteudocadastro {
-  width: 640px;
-  height: 613px;
+  width: 35.05vw;
+  height: 60vh;
+  left: 60.76vw;
+  bottom: 22vh;
   flex-shrink: 0;
   position: relative;
-  left: 677.7px;
-  bottom: 343px;
 }
 .estilotextologin {
-  width: 234px;
-  height: 613px;
+  width: 12.28vw;
+  height: 100%;
   flex-shrink: 0;
 }
 .Recomendalogin {
-  width: 36px;
-  height: 434px;
+  width: 2vw;
+  height: 45vh;
   color: #FFF;
+  background-color: #000;
   font-family: Rubik-Medium;
-  font-size: 41px;
+  font-size: 4.32vh;
   font-style: normal;
   font-weight: 700;
-  left: 50px;
-  top: 50px;
+  left: 2vw;
+  top: 6vh;
   position: relative;
   flex-shrink: 0;
 }
 .Bookslogin {
-  width: 30px;
-  height: 230px;
+  width: 2vw;
+  height: 24.4vh;
+  background-color: #000;
   flex-shrink: 0;
   position: absolute;
-  top: 270px;
-  left: 160px;
+  left: 8.5vw;
+  top: 30vh;
   color: #FFF;
   font-family: Rubik-Medium;
-  font-size: 40px;
+  font-size: 4.32vh;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 .textocadastro{
-  width: 406px;
-  height: 613px;
-  background: #fff;
-  left: 227px;
-  bottom: 40px;
-  position: absolute;
+  background-color: yellow;
+
 }
 .login {
   width: 174px;
@@ -257,12 +264,12 @@ button:hover {
 }
 footer {
   display: inline-flex;
-  height: 80px;
+  height: 10%;
   padding: 31px 181px 25px 183px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  width: 1440px;
+  width: 100vw;
   background: #FF971D;
 }
 .conteudofooter{
