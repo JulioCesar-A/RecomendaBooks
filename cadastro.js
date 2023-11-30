@@ -25,19 +25,43 @@ function mostrarForm2() {
   titulo.textContent = 'Informações Perfil';
   botoesForm1.style.display = 'none'; 
   botoesForm2.style.display = 'flex';
-  telaCadastro.style.height = '104.07vh';
-  campos.style.height = '75vh';
+  telaCadastro.style.height = '124.07vh';
+  campos.style.height = '95vh';
+}
+function previewImg (event, previewID,iconID){
+  const input = event.target;
+  const preview = document.getElementById(previewID);
+  const icone = document.getElementById(iconID)
+
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      preview.src = e.target.result;
+      preview.style.display = 'block';
+      icone.style.display = 'none';
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  } else {
+    preview.src = '';
+    icone.style.display = 'block';
+    preview.style.display = 'none';
+  }
+}
+function enviarImgF(){
+  document.getElementById('imagemFundo').click();
+}
+function enviarImgP(){
+  document.getElementById('imagemPerfil').click();
 }
 function mostrarPopup(mensagem) {
-  // Exibir
   document.getElementById('popup').style.display = 'block';
 
-  // Atualizar a mensagem
   document.getElementById('popupMensagem').textContent = mensagem;
 }
 
 function ocultPopup() {
-  // Ocultar
   document.getElementById('popup').style.display = 'none';
 }
 
