@@ -44,6 +44,7 @@ main {
   height: 84.07vh;
   border-radius: 13.5vh;
   background: #f5f6f8;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0px 1vh 3vw 0px rgba(0, 0, 0, 0.25);
 }
 .estilotelacadastro {
@@ -95,6 +96,7 @@ main {
   width: 40vw;
   height: 55vh;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
   background-color: aqua;
 }
 .form {
@@ -102,7 +104,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 6vh;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease;
   padding-top: 2vh;
 }
 .camposnomes {
@@ -133,7 +135,9 @@ main {
 .nome::placeholder,
 .sobrenome::placeholder,
 .email::placeholder,
-.senha::placeholder {
+.senha::placeholder,
+.Pronomes::placeholder
+.nomeUsuario::placeholder {
   color: #acacae;
   padding-left: 0.5vw;
   font-family: Rambla-Regular;
@@ -142,9 +146,19 @@ main {
 .nome:focus,
 .sobrenome:focus,
 .email:focus,
-.senha:focus {
+.senha:focus,
+.Pronomes:focus,
+.nomeUsuario:focus {
   outline: 0.22vh solid;
   outline-color: #ff971d;
+}
+.Pronomes,
+.nomeUsuario {
+  width: 9vw;
+  height: 4vh;
+  box-sizing: border-box;
+  border-style: none;
+  background: rgba(181, 182, 183, 0.25);
 }
 .botoes {
   width: 40vw;
@@ -191,6 +205,45 @@ main {
 .proximo {
   color: #fff;
   font-family: Rubik-Medium;
+}
+.envioFundo{
+  cursor: pointer;
+  background-color: #D9D9D9;
+  width: 35vw;
+  height: 35vh;
+  display: flex;
+  position: static;
+  justify-content: center;
+}
+.iconeimagem {
+  width: 15%;
+}
+.previewImgF {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.envioPerfil{
+  cursor: pointer;
+  background-color: #ff971d;
+  border-radius: 10vw;
+  width: 8vw;
+  height: 8vw;
+  display: flex;
+  bottom: 11vh;
+  position: relative;
+  justify-content: center;
+}
+.iconepessoa {
+  width: 70%;
+}
+.previewImgP {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.imagemFundo, .imagemPerfil {
+  display: none;
 }
 footer {
   display: inline-flex;
@@ -274,3 +327,4 @@ footer {
   position: relative;
   line-height: normal;
 }
+
