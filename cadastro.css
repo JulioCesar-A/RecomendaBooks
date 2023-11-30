@@ -194,6 +194,14 @@ main {
   border-style: none;
   background: rgba(181, 182, 183, 0.25);
 }
+.camposIdade {
+  width: 20vw;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  background-color: rgb(198, 226, 43);
+} 
 .botoes {
   width: 40vw;
   display: flex;
