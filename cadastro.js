@@ -1,32 +1,36 @@
 let passoAtual = 1;
 const form1 = document.getElementById('Cadastro1');
 const form2 = document.getElementById('Cadastro2');
-const titulo = document.getElementById('titulo');
+const titulo1 = document.getElementById('titulo1');
+const titulo2 = document.getElementById('titulo2');
 const botoesForm1 = document.querySelector('#Cadastro1 .botoes');
 const botoesForm2 = document.querySelector('#Cadastro2 .botoes');
 const telaCadastro = document.querySelector('.telacadastro')
 const campos = document.querySelector('.campos')
 
 function mostrarForm1() {
+  passoAtual = 1;
   form2.classList.remove('form2')
   form1.style.display = 'flex';
   form2.style.display = 'none'
-  titulo.textContent = 'Informações Pessoais';
+  titulo1.textContent = 'Informações Pessoais';
   botoesForm1.style.display = 'flex';
   botoesForm2.style.display = 'none';
   telaCadastro.style.height = '84.07vh';
-  campos.style.height = '55vh';
+  campos.style.height = '60vh';
 }
 
 function mostrarForm2() {
-  form2.classList.add('form2')
+  passoAtual = 2
+  form2.classList.add('-form2')
   form1.style.display = 'none';
   form2.style.display = 'flex';
-  titulo.textContent = 'Informações Perfil';
+  titulo2.textContent = 'Informações Perfil';
   botoesForm1.style.display = 'none'; 
   botoesForm2.style.display = 'flex';
-  telaCadastro.style.height = '124.07vh';
-  campos.style.height = '95vh';
+  botoesForm2.style.paddingBottom = '1vh';
+  telaCadastro.style.height = '154.07vh';
+  campos.style.height = '125vh';
 }
 function previewImg (event, previewID,iconID){
   const input = event.target;
@@ -79,7 +83,6 @@ function proxPass() {
 
     if (nome && sobrenome && email && senha) {
       mostrarForm2();
-      passoAtual = 2
     }
   } else {
     mostrarPopup("Preencha os campos para prosseguir");
