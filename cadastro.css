@@ -44,7 +44,7 @@ main {
   height: 84.07vh;
   border-radius: 13.5vh;
   background: #f5f6f8;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.4s ease-in-out;
   box-shadow: 0px 1vh 3vw 0px rgba(0, 0, 0, 0.25);
 }
 .estilotelacadastro {
@@ -94,9 +94,9 @@ main {
 }
 .campos {
   width: 40vw;
-  height: 55vh;
+  height: 60vh;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.5s ease-in-out;
   background-color: aqua;
 }
 .form {
@@ -104,7 +104,13 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 6vh;
-  transition: all 0.3 ease;
+  padding-top: 2vh;
+}
+.form-form2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6vh;
   padding-top: 2vh;
 }
 .camposnomes {
@@ -120,14 +126,14 @@ main {
 .sobrenome,
 .senha {
   width: 9vw;
-  height: 4vh;
+  height: 5vh;
   box-sizing: border-box;
   border-style: none;
   background: rgba(181, 182, 183, 0.25);
 }
 .email {
   width: 20vw;
-  height: 4vh;
+  height: 5vh;
   box-sizing: border-box;
   border-style: none;
   background: rgba(181, 182, 183, 0.25);
@@ -139,7 +145,7 @@ main {
 .Pronomes::placeholder
 .nomeUsuario::placeholder {
   color: #acacae;
-  padding-left: 0.5vw;
+  padding-left: 1vw;
   font-family: Rambla-Regular;
   font-size: clamp(1.5vh, 1.5vh, 1.5vh);
 }
@@ -152,10 +158,38 @@ main {
   outline: 0.22vh solid;
   outline-color: #ff971d;
 }
-.Pronomes,
 .nomeUsuario {
-  width: 9vw;
-  height: 4vh;
+  width: 40%;
+  height: 5vh;
+  box-sizing: border-box;
+  border-style: none;
+  background: rgba(181, 182, 183, 0.25);
+}
+.visivel {
+  color: #000;
+  font-family: Rambla-Regular;
+}
+.camposPronomes {
+  width: 20vw;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  background-color: blueviolet;
+}
+.camposPronomes2 {
+  width: 6vw;
+  height: 3vh;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  gap: 2vh;
+  background-color: rgb(43, 226, 113);
+}
+.Pronomes {
+  width: 50%;
+  height: 5vh;
+  align-self: center;
   box-sizing: border-box;
   border-style: none;
   background: rgba(181, 182, 183, 0.25);
@@ -228,6 +262,9 @@ main {
   background-color: #ff971d;
   border-radius: 10vw;
   width: 8vw;
+  outline: #000;
+  outline-width: 0.34vw;
+  outline-style: solid;
   height: 8vw;
   display: flex;
   bottom: 11vh;
