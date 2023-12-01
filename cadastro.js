@@ -20,6 +20,7 @@ function mostrarForm1() {
   campos.style.height = '60vh';
 }
 
+
 function mostrarForm2() {
   passoAtual = 2
   form2.classList.add('-form2')
@@ -32,6 +33,8 @@ function mostrarForm2() {
   telaCadastro.style.height = '154.07vh';
   campos.style.height = '125vh';
 }
+
+
 function previewImg (event, previewID,iconID){
   const input = event.target;
   const preview = document.getElementById(previewID);
@@ -45,7 +48,6 @@ function previewImg (event, previewID,iconID){
       preview.style.display = 'block';
       icone.style.display = 'none';
     };
-
     reader.readAsDataURL(input.files[0]);
   } else {
     preview.src = '';
@@ -53,26 +55,22 @@ function previewImg (event, previewID,iconID){
     preview.style.display = 'none';
   }
 }
+
+
 function enviarImgF(){
   document.getElementById('imagemFundo').click();
 }
+
+
 function enviarImgP(){
   document.getElementById('imagemPerfil').click();
-}
-function mostrarPopup(mensagem) {
-  document.getElementById('popup').style.display = 'block';
-
-  document.getElementById('popupMensagem').textContent = mensagem;
-}
-
-function ocultPopup() {
-  document.getElementById('popup').style.display = 'none';
 }
 
 
 window.onload = function() {
   mostrarForm1();
-};
+}
+
 
 function proxPass() {
   if (passoAtual === 1) {
@@ -82,46 +80,72 @@ function proxPass() {
     let senha = document.getElementById("senha").value;
 
     if (nome && sobrenome && email && senha) {
+      localStorage.setItem("nome", nome);
+      localStorage.setItem("sobrenome", sobrenome);
+      localStorage.setItem("email", email);
+      localStorage.setItem("senha", senha);
       mostrarForm2();
     }
-  } else {
-    mostrarPopup("Preencha os campos para prosseguir");
+    else {
+      mostrarPopup("Preencha os campos para prosseguir");
+  }
   }
 }
+
+
 function passoAnt() {
   if (passoAtual === 2) {
     mostrarForm1()
   }
+}
+function mostrarPopup(mensagem) {
+  const popup = document.getElementById('popup');
+  const popupMensagem = document.getElementById('popupMensagem');
+  popupMensagem.textContent = mensagem;
+  popup.style.display = 'flex';
+}
+
+
+function ocultPopup() {
+  document.getElementById('popup').style.display = 'none';
 }
 
 function cancelarCad() {
   localStorage.clear();
   window.location.href = 'login.html';
 }
+
+
 function fazerCad() {
   if (passoAtual === 2) {
     let imagemFundo = document.getElementById("imagemFundo").files[0];
     let imagemPerfil = document.getElementById("imagemPerfil").files[0];
     let nomeUsuario = document.getElementById("nomeUsuario").value;
-    let pronomes = document.getElementById("pronomes").value;
-    let idade = document.getElementById("idade").value;
+    let pronomes = document.getElementById("Pronomes").value;
     let mostrarIdade = document.getElementById("mostrarIdade").checked;
     let mostrarPronomes = document.getElementById("mostrarPronomes").checked;
 
-  if (imagemFundo && imagemPerfil && nomeUsuario && idade) {
-    alert("Cadastro bem-sucedido!");
+    if (imagemFundo && imagemPerfil && nomeUsuario && idade && pronomes) {
+      localStorage.setItem("imagemFundo", URL.createObjectURL(imagemFundo));
+      localStorage.setItem("imagemPerfil", URL.createObjectURL(imagemPerfil));
+      localStorage.setItem("nomeUsuario", nomeUsuario);
+      localStorage.setItem("idade", idade);
+      localStorage.setItem("pronomes", pronomes);
+      localStorage.setItem("mostrarIdade", mostrarIdade);
+      localStorage.setItem("mostrarPronomes", mostrarPronomes);
 
-    localStorage.setItem("imagemFundo", URL.createObjectURL(imagemFundo));
-    localStorage.setItem("imagemPerfil", URL.createObjectURL(imagemPerfil));
-    localStorage.setItem("nomeUsuario", URL.createObjectURL(nomeUsuario));
-    localStorage.setItem("idade", URL.createObjectURL(idade));
-    localStorage.setItem("pronomes", URL.createObjectURL(pronomes));
-    localStorage.setItem("mostrarIdade", URL.createObjectURL(mostrarIdade));
-    localStorage.setItem("mostrarPronomes", URL.createObjectURL(mostrarPronomes),);
-    window.location.href = "perfil.html";
+      mostrarPopup("Cadastro bem-sucedido! Redirecionando para a página de perfil...");
+
+      setTimeout(function() {
+        window.location.href = "perfil.html";
+      }, 2500);
+    } else {
+      mostrarPopup("Preencha todos os campos para concluir o cadastro");
+    }
   }
 }
-}
+
+
 
 function mostrarInfoPerfil() {
   let nomeUsuario = localStorage.getItem("nomeUsuario");
@@ -130,3 +154,6 @@ function mostrarInfoPerfil() {
   let mostrarIdade = localStorage.getItem("mostrarIdade");
   let mostrarPronomes = localStorage.getItem("mostrarIdade");
 }
+
+
+document.getElementById('fecharPopup').addEventListener('click', ocultPopup);
