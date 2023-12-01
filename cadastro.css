@@ -78,7 +78,6 @@ main {
   font-size: 2.5vh;
   background-color: aqua;
 }
-
 .Bookslogin {
   width: 20%;
   height: 50%;
@@ -97,7 +96,6 @@ main {
   height: 60vh;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
-  background-color: aqua;
 }
 .form {
   display: flex;
@@ -142,10 +140,10 @@ main {
 .sobrenome::placeholder,
 .email::placeholder,
 .senha::placeholder,
-.Pronomes::placeholder
+.Pronomes::placeholder,
 .nomeUsuario::placeholder {
   color: #acacae;
-  padding-left: 1vw;
+  padding-left: 0.5vw;
   font-family: Rambla-Regular;
   font-size: clamp(1.5vh, 1.5vh, 1.5vh);
 }
@@ -167,27 +165,26 @@ main {
 }
 .visivel {
   color: #000;
-  font-family: Rambla-Regular;
+  font-family: Rubik-Medium;
+  font-size: 1.6vh;
 }
 .camposPronomes {
-  width: 20vw;
-  height: 12vh;
+  width: 10vw;
+  height: 8.5vh;
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  background-color: blueviolet;
 }
 .camposPronomes2 {
   width: 6vw;
-  height: 3vh;
+  height: 2vh;
   display: flex;
   align-self: center;
   flex-direction: row;
-  gap: 2vh;
-  background-color: rgb(43, 226, 113);
+  gap: 3.3vh;
 }
 .Pronomes {
-  width: 50%;
+  width: 100%;
   height: 5vh;
   align-self: center;
   box-sizing: border-box;
@@ -195,13 +192,38 @@ main {
   background: rgba(181, 182, 183, 0.25);
 }
 .camposIdade {
-  width: 20vw;
-  height: 12vh;
+  width: 9vw;
+  height: 6vh;
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  background-color: rgb(198, 226, 43);
-} 
+}
+.camposIdade2 {
+  width: 8vw;
+  align-self: center;
+  height: 2vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1.3vh;
+}
+.idade{
+  width: 50%;
+  height: 3vh;
+  appearance: none;
+  padding-left: 0.3vw ;
+  text-align: left;
+  font-family: Rambla-Regular;
+  cursor: pointer;
+  border: 0.15vw solid #acacae;
+  border-radius: 1vw;
+  font-size: 90%;
+  transition: border 0.3s ease-in-out;
+  background: url(imagens/seta.svg) no-repeat right center;
+  align-self: center;
+}
+.idade:hover {
+  border: 0.15vw solid #ff971d;
+}
 .botoes {
   width: 40vw;
   display: flex;
@@ -254,6 +276,7 @@ main {
   width: 35vw;
   height: 35vh;
   display: flex;
+  overflow: hidden;
   position: static;
   justify-content: center;
 }
@@ -271,6 +294,7 @@ main {
   border-radius: 10vw;
   width: 8vw;
   outline: #000;
+  overflow: hidden;
   outline-width: 0.34vw;
   outline-style: solid;
   height: 8vw;
@@ -372,4 +396,30 @@ footer {
   position: relative;
   line-height: normal;
 }
-
+.popup {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1vw;
+  gap: 1vh;
+  border: 0.2vh solid #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.popup-mensagem {
+  margin-bottom: 1vh;
+  font-family: Rubik-Regular;
+}
+.fechar-popup {
+  background-color: #ff971d;
+  color: #fff;
+  border: none;
+  padding: 1vh;
+  align-self: center;
+  cursor: pointer;
+}
