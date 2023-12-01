@@ -37,18 +37,18 @@
           <form id="Cadastro2" class="form-form2">
             <h2 class="titulo" id="titulo2"></h2>
             <div class="envioFundo" onclick="enviarImgF()">
-              <img id="previewImgF" class="previewImgF">
-              <img src="imagens/iconeimagem.svg" class="iconeimagem" id="iconeimagem">
+              <img alt="" id="previewImgF" class="previewImgF">
+              <img alt="" src="imagens/iconeimagem.svg" class="iconeimagem" id="iconeimagem">
               <input type="file" class="imagemFundo" id="imagemFundo" onchange="previewImg(event, 'previewImgF','iconeimagem')" name="imagemFundo" accept="image/*" required>
             </div>
             <div class="envioPerfil" onclick="enviarImgP()">
-              <img id="previewImgP" class="previewImgP">
-              <img src="imagens/iconepessoa.svg" class="iconepessoa" id="iconepessoa">
+              <img alt="" id="previewImgP" class="previewImgP">
+              <img alt="" src="imagens/iconepessoa.svg" class="iconepessoa" id="iconepessoa">
               <input type="file" class="imagemPerfil" id="imagemPerfil" onchange="previewImg(event, 'previewImgP','iconepessoa')" name="imagemPerfil" accept="image/*" required>
             </div>
             <input type="text" class="nomeUsuario" id="nomeUsuario" name="nomeUsuario" placeholder="Nome do Usuário" required>
             <div class="camposPronomes">
-              <input type="text" class="Pronomes" id="Pronomes" placeholder="Pronomes" name="Pronomes">
+              <input type="text" class="Pronomes" id="Pronomes" placeholder="Pronomes" name="Pronomes" required>
               <div class="camposPronomes2">
                 <label class="visivel" for="mostrarPronomes">Visível?</label>
                 <input class="checkbox" type="checkbox" id="mostrarPronomes" name="mostrarPronomes">
@@ -56,14 +56,13 @@
             </div>
             <div class="camposIdade">
               <select id="idade" name="idade" class="idade" required>
-                <option value="nulo">-------</option>
-                <option value="15-20">15-20</option>
-                <option value="21-40">21-40</option>
-                <option value="41-65">41-65</option>
-                <option value="65+">65+</option>
+                <option class="valorIdade" value="15-20">15-20</option>
+                <option class="valorIdade" value="21-40">21-40</option>
+                <option class="valorIdade" value="41-65">41-65</option>
+                <option class="valorIdade" value="65+">65+</option>
               </select>
               <div class="camposIdade2">
-                <label class="visivel"" for="mostrarIdade">Mostrar Idade?</label>
+                <label class="visivel" for="mostrarIdade">Mostrar Idade?</label>
                 <input class="checkbox" type="checkbox" id="mostrarIdade" name="mostrarIdade">
               </div>
             </div>
@@ -94,6 +93,10 @@
           </div>
       </div>
     </footer>
+    <div id="popup" class="popup">
+      <div id="popupMensagem" class="popup-mensagem"></div>
+      <button id="fecharPopup" class="fechar-popup" onclick="ocultPopup()">Fechar</button>
+    </div>
   <script src="cadastro.js"></script>
   </body>
 </html>
