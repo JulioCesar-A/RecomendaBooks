@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+  <body>
+    <main>
+      <div class="telacadastro">
+        <div class="estilotelacadastro">
+          <div class="RB"> 
+            <pre class="Recomendalogin">R  E  C  O  M  E  N  D  A</pre>
+            <pre class="Bookslogin">B  O  O  K  S</pre>
+          </div>
+        </div>
+        <div class="campos">
+          <form id="Cadastro1" class="form">
+            <h2 class="titulo" id="titulo1"></h2>
+            <div class="camposnomes">
+              <input type="text" placeholder="Nome" name="nome" id="nome" class="nome" required>
+              <input type="text" placeholder="Sobrenome" name="sobrenome" id="sobrenome" class="sobrenome" required>
+            </div>
+              <input type="text" placeholder="Email" name="email" id="email" class="email" required>
+              <input type="password" placeholder="Senha" name="senha" id="senha" class="senha" required>
+            <div class="botoes">
+              <button class="botaocancelar" type="button" onclick="cancelarCad()">
+                <span class="cancel">Cancelar</span>
+              </button>
+              <button class="botaoprox" type="button" onclick="proxPass()">
+                <span class="proximo">Próximo</span>
+              </button>
+            </div>
+          </form>
+          <form id="Cadastro2" class="formform2">
+            <h2 class="titulo" id="titulo2"></h2>
+            <input type="text" class="nomeUsuario" id="nomeUsuario" name="nomeUsuario" placeholder="Nome do Usuário" required>
+            <div class="camposPronomes">
+              <input type="text" class="Pronomes" id="Pronomes" placeholder="Pronomes" name="Pronomes" required>
+            </div>
+            <div class="camposIdade">
+              <select id="idade" name="idade" class="idade" required>
+                <option class="valorIdade" value="15-20">15-20</option>
+                <option class="valorIdade" value="21-40">21-40</option>
+                <option class="valorIdade" value="41-65">41-65</option>
+                <option class="valorIdade" value="65+">65+</option>
+              </select>
+            </div>
+            <div class="botoes">
+              <button class="botaocancelar" type="button" onclick="passoAnt()">
+                <span class="cancel">Voltar</span>
+              </button>
+              <button class="botaoprox" type="button" onclick="fazerCad()">
+                <span class="proximo">Cadastrar</span>
+              </button>
+            </div>
+          </form> 
+          <div id="perfil" class="perfil">
+            <h2 class="titulo" id="titulo3"></h2>
+            <div id="infoPerfil">
+              <div id="usuarioDiv"></div>
+              <div id="idadeDiv"></div>
+              <div id="pronomesDiv"></div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="conteudofooter">
+          <div class="preptitulo">
+              <div class="quadrofooter">
+                  <div class="grupotextofooter">
+                      <div class="navegacaofooter">
+                          <a class="PaginaInicial" href="RecomendaBooks.html">Página Inicial</a>
+                          <span class="titulofooter">2023<span class="Recomenda">Recomenda</span>Books</span>
+                          <a class="Sobre" href="#">Sobre</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <div id="popup" class="popup">
+      <div id="popupMensagem" class="popup-mensagem"></div>
+      <button id="fecharPopup" class="fechar-popup" onclick="ocultPopup()">Fechar</button>
+    </div>
+  <script src="cadastro.js"></script>
+  </body>
+</html>
